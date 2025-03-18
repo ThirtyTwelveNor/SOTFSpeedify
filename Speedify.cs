@@ -8,6 +8,17 @@ namespace Speedify;
 
 public class Speedify : SonsMod
 {
+    public void RegisterAPI()
+    {
+        OptionalDependAPI.OptionalDependAPI.Register("Speedify", new API());
+    }
+    public class API
+    {
+        public void Run(float? speedifyTime = null, float? speedifyLength = null, float? speedifyResetSpeed = null)
+        {
+            Speedify.Run(speedifyTime, speedifyLength, speedifyResetSpeed);
+        }
+    }
     public Speedify()
     {
 
@@ -48,11 +59,11 @@ public class Speedify : SonsMod
     private static float userConfigSpeedifyTime;
     private static bool isUsingCustomSpeed = false;
 
-    public static void Run(float? _SpeedifyTime = null, float? _SpeedifyLength = null, float? _SpeedifyResetSpeed = null)
+    public static void Run(float? speedifyTime = null, float? speedifyLength = null, float? speedifyResetSpeed = null)
     {
-        float SpeedifyTime = _SpeedifyTime ?? Config.SpeedifyTime.Value;
-        float SpeedifyLength = _SpeedifyLength ?? Config.SpeedifyLength.Value;
-        float SpeedifyResetSpeed = _SpeedifyResetSpeed ?? Config.SpeedifyTime.DefaultValue;
+        float SpeedifyTime = speedifyTime ?? Config.SpeedifyTime.Value;
+        float SpeedifyLength = speedifyLength ?? Config.SpeedifyLength.Value;
+        float SpeedifyResetSpeed = speedifyResetSpeed ?? Config.SpeedifyTime.DefaultValue;
         if (speedifyCoroutine != null)
         {
             speedifyCoroutine.Stop();

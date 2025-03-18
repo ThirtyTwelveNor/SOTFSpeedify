@@ -18,6 +18,9 @@
       <Reference Include="Il2Cppmscorlib">
         <HintPath>$(GameDir)\_RedLoader\Game\Il2Cppmscorlib.dll</HintPath>
       </Reference>
+      <Reference Include="OptionalDependAPI">
+        <HintPath>$(GameDir)\Mods\OptionalDependAPI.dll</HintPath>
+      </Reference>
       <Reference Include="RedLoader">
         <HintPath>$(GameDir)\_RedLoader\net6\RedLoader.dll</HintPath>
       </Reference>
