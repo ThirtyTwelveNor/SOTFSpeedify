@@ -1,10 +1,11 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ToniMacaroni/RedLoader/main/MetadataSchema.json",
-  "id": "Speedify",
-  "author": "You",
-  "version": "1.0.0",
-  "description": "A mod that does something.",
-  "gameVersion": "1.0.0",
-  "type": "Mod",
-  "url": "..."
+    "$schema": "https://raw.githubusercontent.com/ToniMacaroni/RedLoader/main/MetadataSchema.json",
+    "id": "Speedify",
+    "author": "ThirtyTwelve",
+    "dependencies": [ "OptionalDependAPI" ],
+    "version": "1.0.0",
+    "description": "Speeds up game",
+    "gameVersion": "1.0.0",
+    "type": "Mod",
+    "url": "https://github.com/ThirtyTwelveNor/SOTFSpeedify"
 }
